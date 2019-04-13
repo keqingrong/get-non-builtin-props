@@ -4,7 +4,7 @@
 
 > Get non-builtin properties on the `window` object
 
-Live demo available at [here](https://keqingrong.github.io/get-non-builtin-props/example/).
+Live demo available at [here](https://keqingrong.github.io/get-non-builtin-props/example/index.html).
 
 ## Installation
 
