@@ -1,6 +1,6 @@
 {
   "name": "get-non-builtin-props",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get non-builtin properties on the window object",
   "main": "dist/get-non-builtin-props.umd.js",
   "module": "dist/get-non-builtin-props.esm.js",
