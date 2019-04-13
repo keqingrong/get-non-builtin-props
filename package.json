@@ -1,0 +1,31 @@
+{
+  "name": "get-non-builtin-props",
+  "version": "0.0.0",
+  "description": "Get non-builtin properties on the window object",
+  "main": "dist/get-non-builtin-props.umd.js",
+  "module": "dist/get-non-builtin-props.esm.js",
+  "scripts": {
+    "build": "rollup -c && npm run minify",
+    "watch": "rollup -w -c",
+    "open": "opn http://localhost:3000/example/",
+    "serve": "serve -l 3000 ./",
+    "start": "npm-run-all -p watch serve open",
+    "minify": "terser dist/get-non-builtin-props.umd.js --comments -c -m -o dist/get-non-builtin-props.umd.min.js"
+  },
+  "repository": "keqingrong/get-non-builtin-props",
+  "keywords": [
+    "built-in",
+    "builtin",
+    "global",
+    "window"
+  ],
+  "author": "Qingrong Ke <keqingrong1992@gmail.com> (https://keqingrong.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "opn-cli": "^4.0.0",
+    "rollup": "^1.7.3",
+    "serve": "^10.1.2",
+    "terser": "^3.17.0"
+  }
+}
