@@ -25,6 +25,16 @@ console.log('non-builtin property keys', nonBuiltinPropKeys);
 // ["React", "ReactDOM", "$", "jQuery", "_"]
 ```
 
+```js
+import('https://unpkg.com/get-non-builtin-props/dist/get-non-builtin-props.esm.js')
+  .then(({default: getNonBuiltinProps}) => {
+    console.log(getNonBuiltinProps());
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
 ## License
 
 MIT
