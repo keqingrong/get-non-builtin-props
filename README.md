@@ -26,7 +26,7 @@ console.log('non-builtin property keys', nonBuiltinPropKeys);
 ```
 
 ```js
-import('https://unpkg.com/get-non-builtin-props/dist/get-non-builtin-props.esm.js')
+import('https://cdn.jsdelivr.net/npm/get-non-builtin-props@2.0.0/dist/get-non-builtin-props.esm.js')
   .then(({default: getNonBuiltinProps}) => {
     console.log(getNonBuiltinProps());
   })
