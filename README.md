@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/get-non-builtin-props.svg)](https://www.npmjs.com/package/get-non-builtin-props)
 
-> Get non-builtin properties on the `window` object
+Get non-builtin properties on the `window` object
 
 Live demo available at [here](https://keqingrong.github.io/get-non-builtin-props/example/index.html).
 
