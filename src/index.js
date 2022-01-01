@@ -16,23 +16,22 @@ function getNonBuiltinProps() {
   });
 
   const nonBuiltinPropKeys = Object.keys(nonBuiltinObjects);
-  let tempIframeKey;
-  let thisFnKey;
-  if (
-    (tempIframeKey = nonBuiltinPropKeys.find(
-      key => /^\d+$/.test(key) && iframe.contentWindow === window[key]
-    ))
-  ) {
-    delete nonBuiltinObjects[tempIframeKey];
-  }
+  const frames = Array.from(window.frames);
+  nonBuiltinPropKeys
+    .filter(key => /^\d+$/.test(key))
+    .forEach(key => {
+      if (frames.includes(window[key])) {
+        delete nonBuiltinObjects[key];
+      }
+    });
 
   if (
-    (thisFnKey = nonBuiltinPropKeys.find(
+    nonBuiltinPropKeys.find(
       key =>
-        key === getNonBuiltinProps.name && window[key] === getNonBuiltinProps
-    ))
+        key === getNonBuiltinProps.name && getNonBuiltinProps === window[key]
+    )
   ) {
-    delete nonBuiltinObjects[thisFnKey];
+    delete nonBuiltinObjects[getNonBuiltinProps.name];
   }
 
   document.body.removeChild(iframe);
